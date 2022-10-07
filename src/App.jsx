@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './App.css';
 import NavBar from './components/navBar';
+import Home from './pages/Home';
+import Record from './pages/Record';
 
 import { connectWallet, getCurrentWalletConnected, getContract } from './web3/interact';
 
@@ -30,6 +32,10 @@ export function App() {
     < >
       <BrowserRouter >
         <NavBar onClickDisconnectWallet={onClickDisconnectWallet} onClickConnectWallet={onClickConnectWallet} walletAddress={walletAddress}/>
+        <Routes>
+          <Route path='/' element={<Home />}  />
+          <Route path='/record' element={<Record />}  />
+        </Routes>
      </BrowserRouter >
     </>
   );

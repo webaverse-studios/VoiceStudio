@@ -1,0 +1,35 @@
+.record {
+    padding: 150px 60px 30px;
+  }
+
+.record-title {
+  font-weight: bold;
+  padding-left: 50px;
+}
+
+.record-list {
+  list-style-type: none;
+  height: 250px;
+  overflow: scroll;
+}
+
+.record-item {
+  display: flex;
+}
+.record-item .record-txt {
+  padding: 15px;
+  margin: 0;
+  width: 60%;
+}
+.record-item .btn-group {
+  width: 30%;
+  margin: 0;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btn-group button {
+  cursor: pointer;
+}
