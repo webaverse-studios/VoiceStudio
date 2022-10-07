@@ -1,0 +1,13 @@
+.nav-bar-container {
+    padding:30px 0;
+    background: #a9beeb;
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    z-index: 111;
+}
+
+.btn-wallet {
+    float: right;
+    cursor: pointer;
+}
