@@ -1,13 +1,85 @@
-.record {
+.record-page {
     padding: 150px 60px 30px;
   }
+
+.record-box {
+
+}
+
+.record-text {
+  width: 100%;
+  padding: 12px;
+}
+
+.record-text > span {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  line-height: 2em;
+  display: block;
+}
+
+.record-start-icon {
+  width: 60px;
+  display: flex;
+  height: 60px;
+  margin-left:auto;
+  margin-right:auto;
+  align-items: center;
+  background: rgb(255, 0, 0);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 25px;
+}
+
+.record-stop-icon {
+  display: flex;
+  margin-left:auto;
+  margin-right:auto;
+  background: #940505;
+  width: 64px;
+  height:64px;
+}
+
+.audio-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+
+.text-holder {
+  width: 100%;
+  top: 84px;
+}
+
+.text {
+  margin: auto;
+  padding: 3em;
+}
+
+.text > span {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  line-height: 2em;
+  display: block;
+}
+
+
+
+
+
+
 
 .record-title {
   font-weight: bold;
   padding-left: 50px;
 }
 
-.record-list {
+.recorded-list {
   list-style-type: none;
   height: 250px;
   overflow: scroll;
@@ -32,4 +104,6 @@
 
 .btn-group button {
   cursor: pointer;
+  outline: none !important;
 }
+
