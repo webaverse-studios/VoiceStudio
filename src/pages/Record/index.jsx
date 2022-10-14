@@ -148,7 +148,6 @@ const RecordBox = (props) => {
     }
 
     mediaRecorder.stop();
-
     // say that we're not recording
     setRecording(false);
     // save the video to memory
@@ -183,8 +182,8 @@ const RecordBox = (props) => {
         let blob = new window.Blob([new DataView(wav)], {
           type: 'audio/wav'
         })
-        // let audioID = speakerID + '-' + idx
-        // audioID = speakerID + '-' + toRecordIdx
+        let audioID = speakerID + '-' + idx
+        audioID = speakerID + '-' + toRecordIdx
       
         // save audio blob data to the localforage.
         localforage.setItem(audioID, blob).then((audioBlob) => {
@@ -194,15 +193,15 @@ const RecordBox = (props) => {
           anchor.download = audioID + '.wav'
           anchor.click()
           window.URL.revokeObjectURL(audioBlobUrl)
-          // setCsv(csv + (csv !== '' ? '\n' : '') + audioID + "|" + toRecord[toRecordIdx]);
+          setCsv(csv + (csv !== '' ? '\n' : '') + audioID + "|" + toRecord[toRecordIdx]);
   
           // Add new recorded data to the savedRecord array.
           if(!isRerecord) {
             let newSavedRecord = [...savedRecord, audioID + "|" + toRecord[toRecordIdx]];
             setSavedRecord(newSavedRecord);
-            // setIdx(idx + 1);
+            setIdx(idx + 1);
             setRecordIdx(toRecordIdx + 1);
-            // setCurRecordText(toRecord[toRecordIdx+1]);
+            setCurRecordText(toRecord[toRecordIdx+1]);
           }
           setIsRererord(false)
           handleReset();
